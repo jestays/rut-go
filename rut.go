@@ -37,6 +37,18 @@ const (
 // multipliers is a lookup table for the check digit calculation
 var multipliers = [6]int{2, 3, 4, 5, 6, 7}
 
+// isValidRUTChar checks if a character is valid for a RUT and normalizes it.
+// Returns the normalized character and true if valid, 0 and false otherwise.
+func isValidRUTChar(c byte) (byte, bool) {
+	if c >= '0' && c <= '9' {
+		return c, true
+	}
+	if c == 'k' || c == 'K' {
+		return 'K', true
+	}
+	return 0, false
+}
+
 // RUT represents a parsed Chilean RUT.
 type RUT struct {
 	Number int  // RUT number without check digit
@@ -76,16 +88,13 @@ func Parse(s string) (RUT, error) {
 			return RUT{}, ErrTooLong
 		}
 
-		// Validate character
-		if (c < '0' || c > '9') && c != 'k' && c != 'K' {
+		// Validate and normalize character
+		char, ok := isValidRUTChar(c)
+		if !ok {
 			return RUT{}, ErrInvalidFormat
 		}
 
-		if c == 'k' {
-			c = 'K'
-		}
-
-		raw[n] = c
+		raw[n] = char
 		n++
 	}
 
