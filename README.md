@@ -1,5 +1,11 @@
 ![rut-go](https://plvvvfsabjjcaadqfygn.supabase.co/storage/v1/object/public/assets/banner-rut-go.png)
 
+![Go](https://github.com/jestays/rut-go/actions/workflows/go.yml/badge.svg?branch=main)
+![Go Version](https://img.shields.io/github/go-mod/go-version/jestays/rut-go)
+[![Go Reference](https://pkg.go.dev/badge/github.com/jestays/rut-go.svg)](https://pkg.go.dev/github.com/jestays/rut-go)
+[![Go Report Card](https://goreportcard.com/badge/github.com/jestays/rut-go)](https://goreportcard.com/report/github.com/jestays/rut-go)
+![License](https://img.shields.io/github/license/jestays/rut-go)
+
 Validate, parse, and format Chilean RUTs (Rol Unico Tributario) in Go.
 
 ## Features
@@ -15,6 +21,9 @@ Validate, parse, and format Chilean RUTs (Rol Unico Tributario) in Go.
 ```bash
 go get github.com/jestays/rut-go
 ```
+
+## License
+MIT. See `LICENSE`.
 
 ## Usage
 ```go
