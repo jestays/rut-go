@@ -19,7 +19,6 @@ var (
 	ErrEmptyRUT      = errors.New("rut: empty string")
 	ErrTooShort      = errors.New("rut: too short (minimum 5 characters)")
 	ErrTooLong       = errors.New("rut: too long (maximum 10 characters)")
-	ErrInvalidDV     = errors.New("rut: invalid check digit")
 )
 
 // FormatStyle defines the formatting style for the RUT.

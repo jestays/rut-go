@@ -92,7 +92,6 @@ out, err := rut.Format("12.345.678-5", rut.FormatEscaped)
 - `ErrTooShort`
 - `ErrTooLong`
 - `ErrInvalidFormat`
-- `ErrInvalidDV`
 
 ## Tests and benchmarks
 ```bash
