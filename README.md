@@ -1,4 +1,4 @@
-![rut-go](https://plvvvfsabjjcaadqfygn.supabase.co/storage/v1/object/public/assets/banner-rut-go.png)
+![rut-go](https://raw.githubusercontent.com/jestays/cdn/refs/heads/main/banner-rut-go.png)
 
 ![Go](https://github.com/jestays/rut-go/actions/workflows/go.yml/badge.svg?branch=main)
 ![Go Version](https://img.shields.io/github/go-mod/go-version/jestays/rut-go)
